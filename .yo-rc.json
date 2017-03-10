@@ -1,0 +1,9 @@
+{
+  "generator-ndx": {
+    "filters": {
+      "appType": "cli",
+      "appName": "ndx-scheduler"
+    },
+    "appname": "github"
+  }
+}
