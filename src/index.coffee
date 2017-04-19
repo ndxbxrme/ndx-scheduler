@@ -1,7 +1,6 @@
 'use strict'
 
 alasql = require 'alasql'
-ObjectID = require 'bson-objectid'
 
 module.exports = (ndx) ->
   tasks = []
@@ -75,6 +74,6 @@ module.exports = (ndx) ->
         tasks.push 
           task: task
           refreshAt: 0
-          id: ObjectID.generate()
+          id: ndx.generateID()
 
   

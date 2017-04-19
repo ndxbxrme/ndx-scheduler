@@ -1,10 +1,8 @@
 (function() {
   'use strict';
-  var ObjectID, alasql;
+  var alasql;
 
   alasql = require('alasql');
-
-  ObjectID = require('bson-objectid');
 
   module.exports = function(ndx) {
     var insertScheduleItem, needsRefresh, parseDate, running, tasks, tick;
@@ -114,7 +112,7 @@
           return tasks.push({
             task: task,
             refreshAt: 0,
-            id: ObjectID.generate()
+            id: ndx.generateID()
           });
         }
       }
